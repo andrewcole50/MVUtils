@@ -12,7 +12,7 @@
       *********************************************
       queryChar = '! '
       response = ''
-      curlCMD = 'curl -s '
+      curlCMD = 'C:\curl\curl -s '
       
       validTypes = 'GET':@AM:'POST':@AM:'PUT':@AM:'DELETE'
       LOCATE(type, validTypes; i) THEN
