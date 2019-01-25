@@ -6,16 +6,17 @@
       * d3: Untested
       * UniVerse: Untested
       * UniData: Untested
-      * jBase: Works queryChar = CHAR(255):'k'
+      * jBase: Works queryChar = @IM:'k'
       * OpenQM: Untested
       * mvBase: Works queryChar = '! '
       *********************************************
       queryChar = '! '
       response = ''
+      curlCMD = 'curl -s '
       
       validTypes = 'GET':@AM:'POST':@AM:'PUT':@AM:'DELETE'
       LOCATE(type, validTypes; i) THEN
-         curlCommand = queryChar:"C:\Java-Tools\curl\curl.exe -s "
+         curlCommand = queryChar:curlCMD
          curlCommand := '-X ':type:' '
          curlCommand := url:' '
          size = DCOUNT(headers, @AM)
